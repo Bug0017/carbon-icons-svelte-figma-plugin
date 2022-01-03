@@ -5,17 +5,9 @@
 	import {onMount} from "svelte";
 	import * as Icons from "@carbon/icons"
 	import { getAttributes, toSVG } from '@carbon/icon-helpers';
-	//import some Svelte Figma UI components
-	import { Button } from 'figma-plugin-ds-svelte';
-	import * as _ from "lodash"
-
-	let selectedIcon = true;	
-	let iconSVG = 'icon node';
-	let icons=[];
+	
 	let svgs;
-	//this is a reactive variable that will return false when a value is selected from
-	//the select menu, its value is bound to the primary buttons disabled prop
-	$: disabled = selectedIcon === null;
+
 	onMount(()=>{
 		Object.values(Icons).map(icon => {
 			const iconNode = toSVG({
