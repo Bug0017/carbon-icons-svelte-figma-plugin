@@ -72,7 +72,7 @@ figma.ui.onmessage = (msg) => {
         }
         function toSVG(descriptor) {
             const { elem = "svg", attrs = {}, content = [] } = descriptor;
-            const node = document.createElementNS("http://www.w3.org/2000/svg", elem);
+            const node = window.document.createElementNS("http://www.w3.org/2000/svg", elem);
             const attributes = elem !== "svg" ? attrs : getAttributes(attrs);
             Object.keys(attributes).forEach((key) => {
                 node.setAttribute(key, attrs[key]);
@@ -92,3 +92,4 @@ figma.ui.onmessage = (msg) => {
     // keep running, which shows the cancel button at the bottom of the screen.
     figma.closePlugin();
 };
+//# sourceMappingURL=code.js.map
