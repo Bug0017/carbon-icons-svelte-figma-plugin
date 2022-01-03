@@ -13,8 +13,6 @@ figma.showUI(__html__, { width: 500, height: 500 });
 // posted message.
 figma.ui.onmessage = (msg) => {
   
-
-
   if (msg.type === "import-icon") {
     
     console.log(msg.iconSVG);
