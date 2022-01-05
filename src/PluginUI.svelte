@@ -1,7 +1,5 @@
 <script>
 
-	//import Global CSS from the svelte boilerplate
-	//contains Figma color vars, spacing vars, utility classes and more
 	import {onMount} from "svelte";
 	import * as Icons from "@carbon/icons"
 	import { getAttributes, toSVG } from '@carbon/icon-helpers';
